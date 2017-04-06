@@ -1,0 +1,138 @@
+
+<html>
+<head>
+<title>Dice Roller</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/2e5d0d64be1c8a291db6a0c33be3286b01bb6227/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Dice Roller</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+
+
+<script>
+window.onload = function() {
+
+    var copter;
+var copter2;
+
+mouseClickMethod(takeAChance);
+function takeAChance(){
+    remove(copter);
+    remove(copter2);
+    var roll = Randomizer.nextInt(1,6);
+    var roll2 = Randomizer.nextInt(1,6);
+    //println("Rolled: " + roll + "," + roll2);
+    
+    if(roll == 1){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/0/09/Dice-1.svg");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    if(roll == 2){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/3/34/Dice-2.svg");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    if(roll == 3){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Dice-3.svg/557px-Dice-3.svg.png");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    if(roll == 4){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Dice-4.svg/1024px-Dice-4.svg.png");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    if(roll == 5){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Dice-5.svg/557px-Dice-5.svg.png");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    if(roll == 6){
+        copter = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dice-6.svg/557px-Dice-6.svg.png");
+        copter.setSize(150, 150);
+        copter.setPosition(getWidth()/4, getHeight()/2);
+        add(copter); // Adding copter to screen
+    }
+    
+    if(roll2 == 1){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/0/09/Dice-1.svg");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+    if(roll2 == 2){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/3/34/Dice-2.svg");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+    if(roll2 == 3){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Dice-3.svg/557px-Dice-3.svg.png");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+    if(roll2 == 4){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Dice-4.svg/1024px-Dice-4.svg.png");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+    if(roll2 == 5){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Dice-5.svg/557px-Dice-5.svg.png");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+    if(roll2 == 6){
+        copter2 = new WebImage("https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dice-6.svg/557px-Dice-6.svg.png");
+        copter2.setSize(150, 150);
+        copter2.setPosition(getWidth()/4, getHeight()/6);
+        add(copter2); // Adding copter to screen
+    }
+}    
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
